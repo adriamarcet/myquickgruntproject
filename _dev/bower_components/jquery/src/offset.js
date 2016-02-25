@@ -134,8 +134,16 @@ jQuery.fn.extend( {
 			}
 
 			// Add offsetParent borders
+<<<<<<< HEAD
 			parentOffset.top += jQuery.css( offsetParent[ 0 ], "borderTopWidth", true );
 			parentOffset.left += jQuery.css( offsetParent[ 0 ], "borderLeftWidth", true );
+=======
+			// Subtract offsetParent scroll positions
+			parentOffset.top += jQuery.css( offsetParent[ 0 ], "borderTopWidth", true ) -
+				offsetParent.scrollTop();
+			parentOffset.left += jQuery.css( offsetParent[ 0 ], "borderLeftWidth", true ) -
+				offsetParent.scrollLeft();
+>>>>>>> 74ac078b58e4a4d3a88601450b2ba78bfdfc8b37
 		}
 
 		// Subtract parent offsets and element margins

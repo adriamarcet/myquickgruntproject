@@ -1,5 +1,9 @@
 /*!
+<<<<<<< HEAD
  * jQuery JavaScript Library v2.2.1
+=======
+ * jQuery JavaScript Library v2.2.0
+>>>>>>> 74ac078b58e4a4d3a88601450b2ba78bfdfc8b37
  * http://jquery.com/
  *
  * Includes Sizzle.js
@@ -9,7 +13,11 @@
  * Released under the MIT license
  * http://jquery.org/license
  *
+<<<<<<< HEAD
  * Date: 2016-02-22T19:11Z
+=======
+ * Date: 2016-01-08T20:02Z
+>>>>>>> 74ac078b58e4a4d3a88601450b2ba78bfdfc8b37
  */
 
 (function( global, factory ) {
@@ -65,7 +73,11 @@ var support = {};
 
 
 var
+<<<<<<< HEAD
 	version = "2.2.1",
+=======
+	version = "2.2.0",
+>>>>>>> 74ac078b58e4a4d3a88601450b2ba78bfdfc8b37
 
 	// Define a local copy of jQuery
 	jQuery = function( selector, context ) {
@@ -4479,7 +4491,11 @@ function on( elem, types, selector, data, fn, one ) {
 	if ( fn === false ) {
 		fn = returnFalse;
 	} else if ( !fn ) {
+<<<<<<< HEAD
 		return elem;
+=======
+		return this;
+>>>>>>> 74ac078b58e4a4d3a88601450b2ba78bfdfc8b37
 	}
 
 	if ( one === 1 ) {
@@ -5128,6 +5144,7 @@ var
 	rscriptTypeMasked = /^true\/(.*)/,
 	rcleanScript = /^\s*<!(?:\[CDATA\[|--)|(?:\]\]|--)>\s*$/g;
 
+<<<<<<< HEAD
 // Manipulating tables requires a tbody
 function manipulationTarget( elem, content ) {
 	return jQuery.nodeName( elem, "table" ) &&
@@ -5136,6 +5153,16 @@ function manipulationTarget( elem, content ) {
 		elem.getElementsByTagName( "tbody" )[ 0 ] ||
 			elem.appendChild( elem.ownerDocument.createElement( "tbody" ) ) :
 		elem;
+=======
+function manipulationTarget( elem, content ) {
+	if ( jQuery.nodeName( elem, "table" ) &&
+		jQuery.nodeName( content.nodeType !== 11 ? content : content.firstChild, "tr" ) ) {
+
+		return elem.getElementsByTagName( "tbody" )[ 0 ] || elem;
+	}
+
+	return elem;
+>>>>>>> 74ac078b58e4a4d3a88601450b2ba78bfdfc8b37
 }
 
 // Replace/restore the type attribute of script elements for safe DOM manipulation
@@ -5642,7 +5669,11 @@ var getStyles = function( elem ) {
 		// FF meanwhile throws on frame elements through "defaultView.getComputedStyle"
 		var view = elem.ownerDocument.defaultView;
 
+<<<<<<< HEAD
 		if ( !view || !view.opener ) {
+=======
+		if ( !view.opener ) {
+>>>>>>> 74ac078b58e4a4d3a88601450b2ba78bfdfc8b37
 			view = window;
 		}
 
@@ -5791,6 +5822,7 @@ function curCSS( elem, name, computed ) {
 		style = elem.style;
 
 	computed = computed || getStyles( elem );
+<<<<<<< HEAD
 	ret = computed ? computed.getPropertyValue( name ) || computed[ name ] : undefined;
 
 	// Support: Opera 12.1x only
@@ -5799,10 +5831,20 @@ function curCSS( elem, name, computed ) {
 	if ( ( ret === "" || ret === undefined ) && !jQuery.contains( elem.ownerDocument, elem ) ) {
 		ret = jQuery.style( elem, name );
 	}
+=======
+>>>>>>> 74ac078b58e4a4d3a88601450b2ba78bfdfc8b37
 
 	// Support: IE9
 	// getPropertyValue is only needed for .css('filter') (#12537)
 	if ( computed ) {
+<<<<<<< HEAD
+=======
+		ret = computed.getPropertyValue( name ) || computed[ name ];
+
+		if ( ret === "" && !jQuery.contains( elem.ownerDocument, elem ) ) {
+			ret = jQuery.style( elem, name );
+		}
+>>>>>>> 74ac078b58e4a4d3a88601450b2ba78bfdfc8b37
 
 		// A tribute to the "awesome hack by Dean Edwards"
 		// Android Browser returns percentage for some values,
@@ -7852,7 +7894,11 @@ jQuery.extend( jQuery.event, {
 				// But now, this "simulate" function is used only for events
 				// for which stopPropagation() is noop, so there is no need for that anymore.
 				//
+<<<<<<< HEAD
 				// For the 1.x branch though, guard for "click" and "submit"
+=======
+				// For the compat branch though, guard for "click" and "submit"
+>>>>>>> 74ac078b58e4a4d3a88601450b2ba78bfdfc8b37
 				// events is still used, but was moved to jQuery.event.stopPropagation function
 				// because `originalEvent` should point to the original event for the constancy
 				// with other events and for more focused logic
@@ -9622,8 +9668,16 @@ jQuery.fn.extend( {
 			}
 
 			// Add offsetParent borders
+<<<<<<< HEAD
 			parentOffset.top += jQuery.css( offsetParent[ 0 ], "borderTopWidth", true );
 			parentOffset.left += jQuery.css( offsetParent[ 0 ], "borderLeftWidth", true );
+=======
+			// Subtract offsetParent scroll positions
+			parentOffset.top += jQuery.css( offsetParent[ 0 ], "borderTopWidth", true ) -
+				offsetParent.scrollTop();
+			parentOffset.left += jQuery.css( offsetParent[ 0 ], "borderLeftWidth", true ) -
+				offsetParent.scrollLeft();
+>>>>>>> 74ac078b58e4a4d3a88601450b2ba78bfdfc8b37
 		}
 
 		// Subtract parent offsets and element margins
