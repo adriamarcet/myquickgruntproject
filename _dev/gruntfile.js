@@ -1,9 +1,20 @@
+module.exports = function (grunt) {
+
+    grunt.initConfig({
+        pkg: grunt.file.readJSON('package.json'),
+    });
+    grunt.loadTasks('grunt'); //loading the grunt folder here
+    grunt.registerTask('default', ['watch', 'imagemin']);
+};
+
+/* OLd grunt setup coming from @https://goo.gl/Ak6Nqy
 module.exports = function(grunt) {
 
     // 1. All configuration goes here 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
+        /*
         // Concatenate JS files and output scripts.js
         concat: {   
             dist: {
@@ -14,6 +25,7 @@ module.exports = function(grunt) {
                 dest: '../js/scripts.js',
             }
         },
+		
 
         // Minify code from the scripts output
         uglify: {
@@ -22,6 +34,7 @@ module.exports = function(grunt) {
                 dest: '../js/scripts.min.js'
             }
         },
+
 
         // Sass configuration
         sass: {
@@ -36,9 +49,13 @@ module.exports = function(grunt) {
             } 
         },
 
-        // Autoprefix styles
-        postcss: {
-		
+		*/
+
+
+        /*
+		// Autoprefix styles
+		postcss: {
+
 			options: {
 				map: true, // inline sourcemaps
 
@@ -61,18 +78,19 @@ module.exports = function(grunt) {
 				files: [{
 					expand: true,                  // Enable dynamic expansion
 					cwd: '../_img/',                   // Src matches are relative to this path
-					src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
+					src: ['** / *.{png,jpg,gif}'],   change the slash for comment // Actual patterns to match
 					dest: '../img/'                  // Destination path prefix
 				}]
 			}
 		},
+
 
 		// Watch changes
 		watch: {
 
 			// Watch script files
 		    scripts: {
-		        files: ['js/*.js', 'js/**/*.js'],
+		        files: ['js/*.js', 'js/** / *.js'],  // changed slash for comment
 		        tasks: ['concat', 'uglify'],
 		        options: {
 		            spawn: false,
@@ -81,7 +99,7 @@ module.exports = function(grunt) {
 
 		    // Watch style files
 		    css: {
-		        files: ['sass/*.scss','sass/*/**.scss'],
+		        files: ['sass/*.scss','sass/ * / **.scss'], // changed slash for comment
 		        tasks: ['sass','postcss'],
 		        options: {
 		            spawn: false,
@@ -94,19 +112,25 @@ module.exports = function(grunt) {
 		    }
 		},
 
+		*/
+
+	/*
     });
+	*/
 
     // 3. Where we tell Grunt we plan to use this plug-in.
-
+    /*
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-sass');
+    */
 
 	
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['watch', 'imagemin']);
-
+    // grunt.registerTask('default', ['watch', 'imagemin']);
+    /*
 };
+*/
