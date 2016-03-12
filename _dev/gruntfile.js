@@ -70,13 +70,9 @@ module.exports = function(grunt) {
 		// Watch changes
 		watch: {
 
-			options: {
-				// to use this a plugin is needed @https://goo.gl/1dvN5D
-				livereload: true,
-			},
 			// Watch script files
 		    scripts: {
-		        files: ['js/*.js'],
+		        files: ['js/*.js', 'js/**/*.js'],
 		        tasks: ['concat', 'uglify'],
 		        options: {
 		            spawn: false,
@@ -90,6 +86,11 @@ module.exports = function(grunt) {
 		        options: {
 		            spawn: false,
 		        }
+		    },
+
+		    options: {
+		    	// to use this a plugin is needed @https://goo.gl/1dvN5D
+		    	livereload: true,
 		    }
 		},
 
