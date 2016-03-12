@@ -1,5 +1,5 @@
 {
-  "name": "Example grunt project",
+  "name": "Example_grunt_project",
   "version": "0.1.0",
   "devDependencies": {
     "autoprefixer": "^6.2.3",
