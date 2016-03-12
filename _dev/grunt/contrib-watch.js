@@ -20,6 +20,24 @@ module.exports = function(grunt) {
 		    }
 		},
 
+		// Watch image files
+		images: {
+			files: ['../**/*.{png,jpg,gif}', '../img/*.{png,jpg,gif}'],
+			tasks: ['imagemin'],
+			options: {
+				spawn: false,
+			}
+		},
+
+		//Watch html files
+		html:{
+			files: ['../**/*.html'],
+			tasks: [],
+			options: {
+				spawn: false,
+			}
+		},
+
 		options: {
 			// to use this a plugin is needed @https://goo.gl/1dvN5D
 			livereload: true,

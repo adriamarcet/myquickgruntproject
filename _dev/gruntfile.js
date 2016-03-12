@@ -4,7 +4,7 @@ module.exports = function (grunt) {
         pkg: grunt.file.readJSON('package.json'),
     });
     grunt.loadTasks('grunt'); //loading the grunt folder here
-    grunt.registerTask('default', ['watch', 'imagemin']);
+    grunt.registerTask('default', ['imagemin','watch']);
 };
 
 /* OLd grunt setup coming from @https://goo.gl/Ak6Nqy
