@@ -12,6 +12,7 @@ Once done you may go inside the _dev folder (or where the package.json file is l
 
 `npm install -g bower`
 `npm install -g grunt-cli`
+`npm install grunt`
 `npm install`
 
 After that hit
