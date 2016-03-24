@@ -74,6 +74,28 @@
 	}
 }
 
+.list--row {
+    & > * {
+        display: inline-block;
+    }
+}
+
+/* Li counter with style trick @http://goo.gl/vW9Jxj */
+.list--counter {
+  counter-reset: li;
+  /* Initiate a counter */
+}
+.list--counter > li {
+  list-style: none;
+  /* Disable the normal item numbering */
+}
+.list--counter > li:before {
+  content: counter(li);
+  /* Use the counter as content */
+  counter-increment: li;
+  /* Increment the counter by 1 */
+}
+
 @media screen and (min-width: $tablet) {
 
 }
