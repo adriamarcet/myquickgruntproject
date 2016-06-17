@@ -48,3 +48,31 @@
 		margin-bottom: 0;
 	}
 }
+
+
+// Mixin to make the element centered within its parent
+// the parent has to have a position different than static for this to work
+// Reference: @https://goo.gl/mrRc3M
+@mixin center($width: null, $height: null) {
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	// depending if we specified width or height to the mixin
+	@if not $width and not $height {
+		transform: translate(-50%, -50%);
+	} @else if $width and $height {
+		width: $width;
+		height: $height;
+		margin: -($width / 2) #{0 0} -($height / 2);
+	} @else if not $height {
+		width: $width;
+		margin-left: -($width / 2);
+		transform: translateY(-50%);
+	} @else {
+		height: $height;
+		margin-top: -($height / 2);
+		transform: translateX(-50%);
+	}
+}
