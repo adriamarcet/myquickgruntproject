@@ -15,6 +15,8 @@ Once done you may go inside the _dev folder (or where the package.json file is l
 `npm install grunt`
 `npm install`
 
+`npm install postcss-assets --save-dev` (this one can be include to gruntfile as a basic setup? )
+
 After that hit
 
 `bower install`
