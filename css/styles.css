@@ -1,3 +1,5 @@
+/*-- COLORS --*/
+/*-- FOMTS --*/
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -981,21 +983,6 @@ textarea,
   clip: auto;
 }
 
-/*
-@import "variables.scss";
-
-@import "mixins.scss";
-@import "boilerplate-reset.scss";
-
-@import "fonts.scss";
-@import "globals.scss";
-@import "helpers.scss";
-
-@import "components/inputs.scss";
-@import "components/icons.scss";
-@import "components/group.scss";
-@import "components/c-modal.scss";
-*/
 #wpadminbar {
   display: none !important;
 }

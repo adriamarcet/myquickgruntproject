@@ -1,23 +1,11 @@
 @charset "UTF-8";
 
 // Importing styles from base folder
+@import "base/mixins";
+@import "base/variables";
+
 @import "base/normalize";
 @import "base/sanitize";
-/*
-@import "variables.scss";
-
-@import "mixins.scss";
-@import "boilerplate-reset.scss";
-
-@import "fonts.scss";
-@import "globals.scss";
-@import "helpers.scss";
-
-@import "components/inputs.scss";
-@import "components/icons.scss";
-@import "components/group.scss";
-@import "components/c-modal.scss";
-*/
 
 @import "zindex.scss";
 @import "end.scss";
