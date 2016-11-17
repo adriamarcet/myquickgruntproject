@@ -1,0 +1,16 @@
+From Thoughfull CSS at Sparkbox @https://goo.gl/m1AJF8
+
+Base styles are the default styles you want globally across the site.
+Things like typography, box-sizing, normalize...
+
+A common mistake when styling base elements is to be too heavy-handed and create defaults that you don’t really want. Do you really want to remove the standard bulleted list style from unordered lists globally or just in certain circumstances?
+
+
+From https://scotch.io/tutorials/aesthetic-sass-1-architecture-and-style-organization
+
+This folder should contain global styles such as
+mixins,
+variables,
+typography,
+reset,
+colors,
