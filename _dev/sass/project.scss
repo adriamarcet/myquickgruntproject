@@ -9,5 +9,8 @@
 // Importing styles from vendor folder
 // @import "vendor/vendorstyle";
 
+// Importing styles from node_modules (they need to be loaded first)
+@import "vendor/node_modules";
+
 @import "z-index.scss";
 @import "end.scss";
